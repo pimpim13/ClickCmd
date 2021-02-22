@@ -1,7 +1,7 @@
 from setuptools import setup
 
 setup(
-    name="Multisize",
+    name="ImgUtilAZ",
     version='0.1',
     py_modules=['func_img'],
     install_requires=[
@@ -11,7 +11,6 @@ setup(
         [console_scripts]
         Multisize=func_img:multisize
         Multipixel=func_img:multipixel
-        '''
-
+    ''',
 
 )

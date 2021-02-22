@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        ExtractZip=functions:extract_zip
+        InFolder=functions:infolder
+    

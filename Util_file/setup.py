@@ -1,9 +1,9 @@
 from setuptools import setup
 
 setup(
-    name="FileUtil",
+    name="FileUtilAZ",
     version='0.1',
-    py_modules=['function'],
+    py_modules=['functions'],
     install_requires=[
         'Click',
     ],

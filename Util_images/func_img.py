@@ -2,6 +2,7 @@ from PIL import Image
 from glob import glob
 import os
 import click
+from pathlib import Path
 
 
 @click.command()
@@ -33,7 +34,7 @@ def multisize(path=".", destination_path=".", size=(4,)):
     return
 
 @click.command()
-# @click.option('--dest','-d', help='chemin relatif du dossier de destination')
+# @click.option('--dest','-d', help='chemin relatif du dossier de destination', default = '.')
 @click.argument('origine', default='.', type=click.Path(exists=True))
 @click.argument('size', nargs=-1)
 def multipixel(origine, size, dest="."):
@@ -41,6 +42,8 @@ def multipixel(origine, size, dest="."):
     """ redimensionne les images du dossier path passé en parametre
          suivant les tailles en pixel passées aussi en paramètres
          Et stocke le résultat dans le dossier d'origine des images"""
+    print(dest)
+
 
     types = ["jpg", "JPG", "png", "PNG"]
     images = []
@@ -53,6 +56,7 @@ def multipixel(origine, size, dest="."):
         name, ext = os.path.splitext(image)
         reduc = im.height / im.width
 
+
         for taille in size:
             taille = int(taille)
             if im.width >= im.height:
@@ -60,8 +64,9 @@ def multipixel(origine, size, dest="."):
             else:
                 (width, height) = (int(taille / reduc), taille)
 
+
             im_2 = im.resize((width, height))
             im_2.save(f"{name}_{taille}{ext}")
 
 if __name__ == '__main__':
-    pass
+   pass

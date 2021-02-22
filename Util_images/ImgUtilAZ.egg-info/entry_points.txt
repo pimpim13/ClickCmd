@@ -1,0 +1,5 @@
+
+        [console_scripts]
+        Multisize=func_img:multisize
+        Multipixel=func_img:multipixel
+    

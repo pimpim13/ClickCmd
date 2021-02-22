@@ -1,0 +1,8 @@
+functions.py
+setup.py
+FileUtilAZ.egg-info/PKG-INFO
+FileUtilAZ.egg-info/SOURCES.txt
+FileUtilAZ.egg-info/dependency_links.txt
+FileUtilAZ.egg-info/entry_points.txt
+FileUtilAZ.egg-info/requires.txt
+FileUtilAZ.egg-info/top_level.txt
